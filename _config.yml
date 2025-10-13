@@ -2,3 +2,14 @@ theme: minima
 title: Yhdenhengen lukupiiri
 author: Vilhelmiina m. aka vapaaamuija
 description: Lista kaikista kirjoista jotka olen lukenut, koska ja missa, puls lyhyt tuomio.
+
+# Sass configuration to suppress deprecation warnings
+sass:
+  style: compressed
+  sass_dir: assets/_sass
+  sourcemap: never
+  quiet_deps: true
+  silence_deprecations:
+    - color-functions
+    - global-builtin
+    - import

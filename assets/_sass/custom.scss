@@ -1,0 +1,39 @@
+// Custom Sass file to override deprecated functions
+// This file should be imported before the minima theme
+
+@use "sass:color";
+
+// Override deprecated color functions with modern equivalents
+// This prevents deprecation warnings from the Minima theme
+@function lighten($color, $amount) {
+  @return color.adjust($color, $lightness: $amount);
+}
+
+@function darken($color, $amount) {
+  @return color.adjust($color, $lightness: -$amount);
+}
+
+// Override other deprecated functions that might be used
+@function saturate($color, $amount) {
+  @return color.adjust($color, $saturation: $amount);
+}
+
+@function desaturate($color, $amount) {
+  @return color.adjust($color, $saturation: -$amount);
+}
+
+@function fade-in($color, $amount) {
+  @return color.adjust($color, $alpha: $amount);
+}
+
+@function fade-out($color, $amount) {
+  @return color.adjust($color, $alpha: -$amount);
+}
+
+@function transparentize($color, $amount) {
+  @return color.adjust($color, $alpha: -$amount);
+}
+
+@function opacify($color, $amount) {
+  @return color.adjust($color, $alpha: $amount);
+}

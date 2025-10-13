@@ -1,5 +1,4 @@
 ---
-title: Welcome to my blog. Is this the wellcome page or an post?
+layout: home
 ---
-hello world
 
